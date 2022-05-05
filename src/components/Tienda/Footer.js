@@ -2,8 +2,6 @@ import React,{useState,useEffect} from 'react';
 import "./Footer.css";
 import { app } from '../../fb';
 import facebook from "../../medios/redes sociales/facebook.svg";
-import google from "../../medios/redes sociales/google.svg";
-import instagram from "../../medios/redes sociales/instagram.svg";
 import whatsapp from "../../medios/redes sociales/whatsapp.svg";
 
 
@@ -43,7 +41,7 @@ export const Footer = () => {
             ))}
           </div>
 
-          <div className="columnafooter1">
+          {/* <div className="columnafooter1">
             <div>
               <h2 className="titulofooter">Dirección</h2>
               <div>
@@ -55,7 +53,7 @@ export const Footer = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="columnafooter2">
             <div>
@@ -71,10 +69,10 @@ export const Footer = () => {
 
           <div className="columnafooter3">
             <div>
-              <h2 className="titulofooter">Redes Sociales</h2>
+              <h2 className="titulofooter">Red Social</h2>
               <div className="redesgrid">
                 <div>
-                  <a href='https://api.whatsapp.com/send?phone=51940922980&text=Hola,%20vengo%20del%20demo'>
+                  <a href='https://api.whatsapp.com/send?phone=51940922980&text=Hola,%20vengo%20de%20la%20tienda%20virtual'>
                   <img
                     className="redesicon"
                     src={whatsapp}
@@ -84,7 +82,7 @@ export const Footer = () => {
                 </div>
 
                 <div>
-                  <a href='https://www.facebook.com/Inbokzer'>
+                  <a href='https://www.facebook.com/andrewhobbit.er/'>
                   <img
                     className="redesicon"
                     src={facebook}
@@ -93,21 +91,6 @@ export const Footer = () => {
                   </a>
                 </div>
 
-                <div>
-                  <a href='https://www.instagram.com/inbokzer/'>
-                  <img
-                    className="redesicon"
-                    src={instagram}
-                    alt="instagram logo"
-                  />
-                  </a>
-                </div>
-
-                <div>
-                  <a href='https://inbokzer.com'>
-                  <img className="redesicon" src={google} alt="google logo" />
-                  </a>
-                </div>
               </div>
             </div>
           </div>

@@ -8,10 +8,6 @@ const initialConfig={
     negocio:"",
 };
 
-const initialDireccion={
-    direccionlinea1:"",
-    direccionlinea2:"",
-}
 
 const initialnumero={
     numeronegocio:"",
@@ -22,19 +18,9 @@ const initialnumero={
 export const Configuracion = () => {
 
     const [dataInfo,setDataInfo]=useState(initialConfig);
-    const [direccion,setDireccion]=useState(initialDireccion);
     const [numeroNegocio,setNumeroNegocio]=useState(initialnumero);
 
 
-    const saveDireccion=async(e)=>{
-        e.preventDefault();
-        app
-        .firestore()
-        .collection("configuracion")
-        .doc("direcciones")
-        .set({...direccion})
-
-    }
 
     const saveNumero=async(e)=>{
         e.preventDefault();
@@ -73,37 +59,6 @@ export const Configuracion = () => {
                             placeholder="nombre del negocio"
                             className="inputForm"
                             onChange={(e) => setDataInfo({ ...dataInfo, negocio: e.target.value })}
-                        />
-                    </div>
-                 
-                    <button className='BotonPositivo'>Guardar</button>
-                </form> 
-            </div>
-
-            <div>
-                <h2 className="titulos">Información de tu negocio</h2>
-            </div>
-
-            <div className='inputformcontainer'>
-                <form onSubmit={saveDireccion}>
-                    <div className="nombrebox">
-                        <p>direccion del negocio linea 1</p>
-                        <input
-                            type="text"
-                            name="negocio"
-                            placeholder="nombre del negocio"
-                            className="inputForm"
-                            onChange={(e) => setDireccion({ ...direccion, direccionlinea1: e.target.value })}
-                        />
-                    </div>
-                    <div className="nombrebox">
-                        <p>direccion del negocio linea 2</p>
-                        <input
-                            type="text"
-                            name="negocio"
-                            placeholder="nombre del negocio"
-                            className="inputForm"
-                            onChange={(e) => setDireccion({ ...direccion, direccionlinea2: e.target.value })}
                         />
                     </div>
                  

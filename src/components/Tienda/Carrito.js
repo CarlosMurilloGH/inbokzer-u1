@@ -64,7 +64,7 @@ export const Carrito = () => {
           <button className="BotonComprar">
             <a className="anchorcomprar"
             rel="noreferrer" target="_blank"
-              href={`https://api.whatsapp.com/send?phone=51940922980&text=${
+              href={`https://api.whatsapp.com/send?phone=5215573563543&text=${
                 getString().string
               }`}
             >
